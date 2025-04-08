@@ -5,8 +5,8 @@ use darling::FromDeriveInput;
 use darling::FromField;
 use darling::FromMeta;
 use darling::FromVariant;
-extern crate syn;
-use syn;
+use syn::{parse_macro_input, DeriveInput};
+
 
 //use darling::export::syn;
 
