@@ -5,8 +5,9 @@ use darling::FromDeriveInput;
 use darling::FromField;
 use darling::FromMeta;
 use darling::FromVariant;
+use syn;
 
-use darling::export::syn;
+//use darling::export::syn;
 
 mod r#enum;
 
