@@ -11,6 +11,7 @@ readme.workspace = true
 
 
 [dependencies]
+syn = "2.0.100"
 bytes.workspace = true
 generic-array.workspace = true
 percent-encoding.workspace = true
