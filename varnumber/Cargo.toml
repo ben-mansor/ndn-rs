@@ -1,0 +1,18 @@
+[package]
+name = "ndn-varnumber"
+description = "Named Data Networking - VarNumber implementation"
+
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+readme.workspace = true
+
+
+[dependencies]
+bytes.workspace = true
+
+
+[lints]
+workspace = true
