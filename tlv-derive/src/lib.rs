@@ -41,8 +41,8 @@ struct TlvDerive {
     ident: syn::Ident,
     attrs: Vec<syn::Attribute>,
     data: ast::Data<PayloadVariant, PayloadItem>,
-    r#type: syn::Path,
-    error: syn::Path,
+    r#type: Path,
+    error: Path,
     #[darling(default = "Crates::default_crates")]
     crates: Crates,
 }
