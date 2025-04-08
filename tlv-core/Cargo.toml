@@ -10,6 +10,7 @@ description = "Named Data Networking - Core Tlv trait"
 
 
 [dependencies]
+syn = "2.0.100"
 bytes.workspace = true
 generic-array.workspace = true
 tokio-util.workspace = true
