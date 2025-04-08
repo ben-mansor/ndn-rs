@@ -5,10 +5,9 @@ use darling::FromDeriveInput;
 use darling::FromField;
 use darling::FromMeta;
 use darling::FromVariant;
-use syn::{parse_macro_input, DeriveInput};
 
-
-//use darling::export::syn;
+extern crate syn;
+use syn::{Attribute, Ident, Path, Type, DeriveInput};
 
 mod r#enum;
 
@@ -18,7 +17,7 @@ pub fn derive(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
 }
 
 fn derive2(input: proc_macro2::TokenStream) -> proc_macro2::TokenStream {
-    let ast: syn::DeriveInput = match syn::parse2(input) {
+    let ast: DeriveInput = match syn::parse2(input) {
         Ok(ast) => ast,
         Err(err) => return err.to_compile_error(),
     };
@@ -38,8 +37,8 @@ fn derive2(input: proc_macro2::TokenStream) -> proc_macro2::TokenStream {
     supports(struct_any, enum_newtype, enum_unit)
 )]
 struct TlvDerive {
-    ident: syn::Ident,
-    attrs: Vec<syn::Attribute>,
+    ident: Ident,
+    attrs: Vec<Attribute>,
     data: ast::Data<PayloadVariant, PayloadItem>,
     r#type: Path,
     error: Path,
@@ -49,23 +48,21 @@ struct TlvDerive {
 
 #[derive(Debug, FromVariant)]
 struct PayloadVariant {
-    ident: syn::Ident,
-    // discriminant: Option<syn::Expr>,
+    ident: Ident,
     fields: ast::Fields<PayloadItem>,
 }
 
 #[derive(Debug, FromField)]
 struct PayloadItem {
-    ident: Option<syn::Ident>,
-    ty: syn::Type,
+    ident: Option<Ident>,
+    ty: Type,
 }
 
 #[derive(Debug, FromMeta)]
 struct Crates {
     #[darling(default = "Self::default_tlv_core")]
-    tlv_core: syn::Path,
+    tlv_core: Path,
 }
-
 impl Default for Crates {
     fn default() -> Self {
         Self::default_crates()
