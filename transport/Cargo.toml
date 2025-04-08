@@ -1,0 +1,26 @@
+[package]
+name = "ndn-transport"
+description = "Named Data Networking - Transports"
+
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+readme.workspace = true
+
+
+[dependencies]
+bytes.workspace = true
+futures.workspace = true
+tokio.workspace = true
+tokio-util.workspace = true
+tracing.workspace = true
+
+ndn-face.workspace = true
+ndn-tlv.workspace = true
+# ndn-varnumber.workspace = true
+
+
+[lints]
+workspace = true

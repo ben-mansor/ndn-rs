@@ -1,0 +1,23 @@
+[package]
+name = "ndn-face"
+description = "Named Data Networking - Face"
+
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+readme.workspace = true
+
+
+[dependencies]
+bytes.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+
+ndn-tlv.workspace = true
+ndn-varnumber.workspace = true
+
+
+[lints]
+workspace = true

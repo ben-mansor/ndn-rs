@@ -1,0 +1,21 @@
+[package]
+name = "ndn-management"
+description = "Named Data Networking - NFD Management Protocol"
+
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+readme.workspace = true
+
+
+[dependencies]
+bytes.workspace = true
+ndn-face.workspace = true
+ndn-tlv.workspace = true
+ndn-varnumber.workspace = true
+
+
+[lints]
+workspace = true

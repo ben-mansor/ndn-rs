@@ -1,0 +1,26 @@
+[package]
+name = "ndn-tlv"
+description = "Named Data Networking - TLV"
+
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+readme.workspace = true
+
+
+[dependencies]
+bytes.workspace = true
+generic-array.workspace = true
+percent-encoding.workspace = true
+rand.workspace = true
+thiserror.workspace = true
+time.workspace = true
+tracing.workspace = true
+
+ndn-tlv-core.workspace = true
+
+
+[lints]
+workspace = true

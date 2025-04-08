@@ -1,0 +1,26 @@
+[package]
+name = "ndn-client"
+description = "Named Data Networking - Client Library"
+
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+readme.workspace = true
+
+
+[dependencies]
+bytes.workspace = true
+hashbrown.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+
+ndn-face.workspace = true
+ndn-router.workspace = true
+ndn-tlv.workspace = true
+ndn-transport.workspace = true
+
+
+[lints]
+workspace = true
