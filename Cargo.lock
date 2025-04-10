@@ -1267,5 +1267,3 @@ dependencies = [
  "quote",
  "syn",
 ]
-[patch.crates-io]
-spin = "0.9.8"
