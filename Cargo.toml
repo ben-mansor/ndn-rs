@@ -79,3 +79,6 @@ rust_2018_idioms = "warn"
 trivial_casts = "warn"
 unused = "warn"
 warnings = "deny"
+
+[patch.crates-io]
+spin = "0.9.8"
