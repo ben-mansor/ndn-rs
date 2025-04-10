@@ -21,13 +21,13 @@ version = "0.0.3-alpha.4"
 authors = ["Cyril Plisko <cyril.plisko@mountall.com>"]
 edition = "2021"
 license = "Apache-2.0/MIT"
-repository = "https://github.com/ndn-rs/ndn-rs"
+repository = "https://github.com/ben-mansor/ndn-rs"
 readme = "README.md"
 
 
 [workspace.dependencies]
 syn = "2.0.100"
-spin = "0.10.0"
+spin = "0.9.8"
 anyhow = "1.0"
 bytes = "1.5"
 clap = { version = "4.4", features = ["derive", "env"] }
@@ -80,5 +80,4 @@ trivial_casts = "warn"
 unused = "warn"
 warnings = "deny"
 
-[patch.crates-io]
-spin = "0.9.8"
+
